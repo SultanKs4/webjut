@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
@@ -58,7 +58,8 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array();
+//  Jobsheet 2 Praktikum Bagian 1 Langkah 4
+$autoload['libraries'] = array('database', 'form_validation');
 
 /*
 | -------------------------------------------------------------------
@@ -89,7 +90,8 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array();
+// Jobsheet 2 Langkah 1 Bagian 16 B
+$autoload['helper'] = array('url');
 
 /*
 | -------------------------------------------------------------------
