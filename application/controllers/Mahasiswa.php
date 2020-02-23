@@ -18,6 +18,8 @@ class mahasiswa extends CI_Controller
     public function tambah()
     {
         $data['title'] = 'Form Menambahkan Data Mahasiswa';
+        //  Jobsheet 4 Bagian 1 Langkah 7 F
+        $data['jurusan'] = ['Teknik Informatika', 'Teknik Kimia', 'Teknik Industri', 'Teknik Mesin'];
 
         //  Jobsheet 2 Bagian 2 Langkah 7 E
         $this->form_validation->set_rules('nama', 'Nama', 'required');
@@ -57,6 +59,10 @@ class mahasiswa extends CI_Controller
         // Point 5
         $data['title'] = 'List Mahasiswa';
         $data['mahasiswa'] = $this->mahasiswa_model->getAllMahasiswa();
+        // Jobsheet 4 Praktikum Bagian 2 Langkah 4
+        if ($this->input->post('keyword')) {
+            $data['mahasiswa'] = $this->mahasiswa_model->cariDataMahasiswa();
+        }
         $this->load->view('template/header', $data);
         $this->load->view('mahasiswa/index', $data);
         $this->load->view('template/footer');
@@ -69,6 +75,40 @@ class mahasiswa extends CI_Controller
         $this->session->set_flashdata('flash-data', 'dihapus');
 
         redirect('mahasiswa', 'refresh');
+    }
+
+    // Jobsheet 4 Praktikum Bagian 1 Langkah 4
+    public function detail($id)
+    {
+        $data['title'] = 'Detail Mahasiswa';
+        $data['mahasiswa'] = $this->mahasiswa_model->getmahasiswaByID($id);
+        $this->load->view('template/header', $data);
+        $this->load->view('mahasiswa/detail', $data);
+        $this->load->view('template/footer');
+    }
+
+    public function edit($id)
+    {
+        $data['title'] = 'Form Edit Data Mahasiswa';
+        $data['mahasiswa'] = $this->mahasiswa_model->getmahasiswaByID($id);
+        //  Jobsheet 4 Bagian 1 Langkah 7 F
+        $data['jurusan'] = ['Teknik Informatika', 'Teknik Kimia', 'Teknik Industri', 'Teknik Mesin'];
+
+
+        //  Jobsheet 4 Bagian 1 Langkah 7 C
+        $this->form_validation->set_rules('nama', 'Nama', 'required');
+        $this->form_validation->set_rules('nim', 'NIM', 'required|numeric');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+
+        if ($this->form_validation->run() ==  FALSE) {
+            $this->load->view('template/header', $data);
+            $this->load->view('mahasiswa/edit', $data);
+            $this->load->view('template/footer');
+        } else {
+            $this->mahasiswa_model->ubahdatamhs();
+            $this->session->set_flashdata('flash-data', 'diedit');
+            redirect('mahasiswa', 'refresh');
+        }
     }
 }
     

@@ -1,34 +1,35 @@
-<!-- Jobsheet 2 Praktikum Bagian 2 Langkah 4-->
+<!-- Jobsheet 4 Praktikum Bagian 1 Langkah 7 D -->
 <div class="container">
     <b class="row mt-3">
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    Form Tambah Data Mahasiswa
+                    Form Edit Data Mahasiswa
                 </div>
                 <div class="card-body">
-                    <!-- Jobsheet 2 Praktikum Bagian 2 Langkah 7 H (Tambah Alert) -->
                     <?php if (validation_errors()) : ?>
                     <div class="alert alert-danger" role="alert">
-                        <!-- Jobsheet 2 Praktikum Bagian 2 Langkah 7 F -->
                         <?= validation_errors(); ?>
                     </div>
                     <?php endif ?>
                     <form method="post" action="">
-                        <!-- Jobsheet 2 Praktikum Bagian 2 Langkah 7 D (Tambah atribut name) -->
+                        <input type="hidden" name="id" value="<?= $mahasiswa['id']; ?>">
                         <div class="form-group">
                             <label for="nama">Nama</label>
-                            <input id="nama" class="form-control" type="text" name="nama">
+                            <input id="nama" class="form-control" type="text" name="nama"
+                                value="<?= $mahasiswa['nama']; ?>">
                         </div>
-                        <div class="form-group">
+                        <div class=" form-group">
                             <label for="nim">NIM</label>
-                            <input id="nim" class="form-control" type="number" name="nim">
+                            <input id="nim" class="form-control" type="number" name="nim"
+                                value="<?= $mahasiswa['nim']; ?>">
                         </div>
-                        <div class="form-group">
+                        <div class=" form-group">
                             <label for="email">email</label>
-                            <input id="email" class="form-control" type="email" name="email">
+                            <input id="email" class="form-control" type="email" name="email"
+                                value="<?= $mahasiswa['email']; ?>">
                         </div>
-                        <div class="form-group">
+                        <div class=" form-group">
                             <label for="jurusan">Jurusan</label>
                             <select class="form-content" id="jurusan" name="jurusan">
                                 <!-- Jobsheet 4 Praktikum Bagian 1 Langkah 7 F -->
