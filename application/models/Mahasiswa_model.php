@@ -29,6 +29,13 @@ class mahasiswa_model extends CI_Model
         );
         $this->db->insert('mahasiswa', $data);
     }
+
+    // Jobsheet 3 Praktikum Bagian 2 Langkah 8
+    public function hapusdatamhs($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('mahasiswa');
+    }
 }
 
 /* End of file mahasiswa_model.php */

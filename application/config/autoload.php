@@ -58,8 +58,9 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-//  Jobsheet 2 Praktikum Bagian 1 Langkah 4
-$autoload['libraries'] = array('database', 'form_validation');
+//  Jobsheet 2 Praktikum Bagian 1 Langkah 4 (Database & Form Validation)
+//  Jobsheet 3 Praktikum Bagian 1 Langkah 3 (Session)
+$autoload['libraries'] = array('database', 'form_validation', 'session');
 
 /*
 | -------------------------------------------------------------------

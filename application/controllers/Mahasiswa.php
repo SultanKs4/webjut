@@ -35,6 +35,10 @@ class mahasiswa extends CI_Controller
         } else {
             //  Jobsheet 2 Bagian 3 Langkah 1
             $this->mahasiswa_model->tambahdatamhs();
+
+            // Jobsheet 3 Bagian 1 Langkah 4
+            $this->session->set_flashdata('flash-data', 'ditambahkan');
+
             redirect('mahasiswa', 'refresh');
         }
     }
@@ -56,6 +60,15 @@ class mahasiswa extends CI_Controller
         $this->load->view('template/header', $data);
         $this->load->view('mahasiswa/index', $data);
         $this->load->view('template/footer');
+    }
+
+    // Jobsheet 3 Praktikum Bagian 2 Langkah 7
+    public function hapus($id)
+    {
+        $this->mahasiswa_model->hapusdatamhs($id);
+        $this->session->set_flashdata('flash-data', 'dihapus');
+
+        redirect('mahasiswa', 'refresh');
     }
 }
     
