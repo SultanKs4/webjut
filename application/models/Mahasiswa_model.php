@@ -24,6 +24,10 @@ class mahasiswa_model extends CI_Model
         $data = array(
             'nama' => $this->input->post('nama', true),
             'nim' => $this->input->post('nim', true),
+            //  Jobsheet 4 Tugas
+            'jenis_kelamin' => $this->input->post('jenis_kelamin', true),
+            'alamat' => $this->input->post('alamat', true),
+            'telepon' => $this->input->post('telepon', true),
             'email' => $this->input->post('email', true),
             'jurusan' => $this->input->post('jurusan', true)
         );
@@ -49,6 +53,10 @@ class mahasiswa_model extends CI_Model
         $data = array(
             "nama" => $this->input->post('nama', true),
             "nim" => $this->input->post('nim', true),
+            //  Jobsheet 4 Tugas
+            'jenis_kelamin' => $this->input->post('jenis_kelamin', true),
+            'alamat' => $this->input->post('alamat', true),
+            'telepon' => $this->input->post('telepon', true),
             "email" => $this->input->post('email', true),
             "jurusan" => $this->input->post('jurusan', true)
         );

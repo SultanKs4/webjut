@@ -22,12 +22,16 @@ class mahasiswa extends CI_Controller
         $data['jurusan'] = ['Teknik Informatika', 'Teknik Kimia', 'Teknik Industri', 'Teknik Mesin'];
 
         //  Jobsheet 2 Bagian 2 Langkah 7 E
-        $this->form_validation->set_rules('nama', 'Nama', 'required');
+        $this->form_validation->set_rules('nama', 'Nama', 'trim|required');
         //  Jobsheet 2 Bagian 2 Langkah 7 J
         //  Jobsheet 2 Bagian 2 Langkah 7 N (Add Numerin)
-        $this->form_validation->set_rules('nim', 'NIM', 'required|numeric');
+        $this->form_validation->set_rules('nim', 'NIM', 'trim|required|numeric');
         //  Jobsheet 2 Bagian 2 Langkah 7 L Valid Email
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+        //  Jobsheet 4 Tugas
+        $this->form_validation->set_rules('telepon', 'Telepon', 'trim|required|numeric');
+        $this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
+        $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'trim|required');
 
         //  Jobsheet 2 Bagian 2 Langkah 7 B
         if ($this->form_validation->run() ==  FALSE) {
@@ -99,6 +103,10 @@ class mahasiswa extends CI_Controller
         $this->form_validation->set_rules('nama', 'Nama', 'required');
         $this->form_validation->set_rules('nim', 'NIM', 'required|numeric');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        //  Jobsheet 4 Tugas
+        $this->form_validation->set_rules('telepon', 'Telepon', 'trim|required|numeric');
+        $this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
+        $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'trim|required');
 
         if ($this->form_validation->run() ==  FALSE) {
             $this->load->view('template/header', $data);

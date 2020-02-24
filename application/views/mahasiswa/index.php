@@ -38,7 +38,7 @@
         </div>
     </div>
     <div class="row mt-3">
-        <div class="col-md-6">
+        <div class="col-md-8">
             <h2>Daftar Mahasiswa</h2>
             <!-- Jobsheet 4 Praktikum Bagian 2 Langkah 8 -->
             <?php if (empty($mahasiswa)) : ?>
@@ -58,13 +58,14 @@
             <!-- Jobsheet 2 -->
             <table class="table table-light">
                 <thead class="thead-light">
-                    <!--                     <tr>
+                    <!-- Jobsheet 4 Tugas -->
+                    <tr>
                         <th>Nama</th>
                         <th>NIM</th>
-                        <th>Email</th>
+                        <!-- <th>Email</th> -->
                         <th>Jurusan</th>
                         <th>Action</th>
-                    </tr> -->
+                    </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($mahasiswa as $mhs) : ?>
@@ -72,15 +73,15 @@
                         <td>
                             <?= $mhs['nama']; ?>
                         </td>
-                        <!-- <td>
+                        <td>
                             <?= $mhs['nim']; ?>
                         </td>
-                        <td>
+                        <!-- <td>
                             <?= $mhs['email']; ?>
-                        </td>
+                        </td> -->
                         <td>
                             <?= $mhs['jurusan']; ?>
-                        </td> -->
+                        </td>
                         <td>
                             <!-- Jobsheet 3 Bagian Praktikum 2 Langkah 1 - 6 -->
                             <a href="<?= base_url(); ?>mahasiswa/hapus/<?= $mhs['id']; ?>"
