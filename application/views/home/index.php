@@ -13,4 +13,5 @@
 
 </html> -->
 
-<h1>Hello, <?php echo $nama ?>!</h1>
+<!-- Jobsheet 5 Praktikum Bagian 1 Langkah 27 -->
+<h1>Hello, <?= $this->session->userdata('level'); ?>!</h1>

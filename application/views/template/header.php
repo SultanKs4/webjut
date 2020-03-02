@@ -48,13 +48,16 @@
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <!-- Jobsheet 2 langklah 1 Bagian 16 A -->
-                    <a class="nav-link" href="<?= base_url(); ?>">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?= base_url(); ?>home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url(); ?>mahasiswa">Data Mahasiswa</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url(); ?>">About</a>
+                    <!-- Jobsheet 5 langklah 1 Bagian 21 -->
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url(); ?>login/logout">Logout</a>
 
                     <!-- <a class="nav-item  nav-link disabled" href="#">Disabled</a> -->
                 </li>

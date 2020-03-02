@@ -12,6 +12,11 @@ class mahasiswa extends CI_Controller
         // $this->load->database();
         parent::__construct();
         $this->load->model('mahasiswa_model');
+
+        //  Jobsheet 5 Praktikum Bagian 1 Langkah 24
+        if ($this->session->userdata('level') != "admin") {
+            redirect('login', 'refresh');
+        }
     }
 
     //  Jobsheet 2 Praktikum Bagian 2 Langkah 3
