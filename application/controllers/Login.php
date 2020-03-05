@@ -26,8 +26,8 @@ class login extends CI_Controller
     // Jobsheet 5 Praktikum Bagian 1 Langkah 10
     public function proses_login()
     {
-        $username = htmlspecialchars($this->input->post('uname1'));
-        $password = htmlspecialchars($this->input->post('pwd1'));
+        $username = htmlspecialchars($this->input->post('username'));
+        $password = htmlspecialchars(md5($this->input->post('password')));
 
         $ceklogin = $this->login_model->login($username, $password);
 
@@ -36,12 +36,18 @@ class login extends CI_Controller
             //set userdata pada session dengan nama user dan isi username kita isikan username yg ada pada $row
             $this->session->set_userdata('user', $row->username);
             $this->session->set_userdata('level', $row->level);
+            $this->session->set_userdata('user_id', $row->user_id);
 
             if ($this->session->userdata('level') == "admin") {
                 redirect('mahasiswa/index');
             } elseif ($this->session->userdata('level') == "user") {
-                // Jobsheet 5 Praktikum Bagian 1 Langkah 18
-                redirect('user');
+                if ($this->session->userdata('user_id') != null) {
+                    $user_id = $this->session->userdata('user_id');
+                    redirect('detail/mahasiswa/' . $user_id);
+                } else {
+                    // Jobsheet 5 Praktikum Bagian 1 Langkah 18
+                    redirect('user');
+                }
             }
         } else {
             // Jobsheet 5 Praktikum Bagian 1 Langkah 16

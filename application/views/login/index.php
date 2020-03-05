@@ -17,15 +17,15 @@
                             <form class="form" role="form" autocomplete="off" id="formlogin" novalidate=""
                                 method="POST">
                                 <div class="form-group">
-                                    <label for="uname1">Username</label>
-                                    <input type="text" class="form-control form-control-lg rounded-0" name="uname1"
-                                        id="uname1" required="">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control form-control-lg rounded-0" name="username"
+                                        id="username" required="">
                                     <div class="invalid-feedback">Oops, you missed this one</div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="pwd1">Password</label>
-                                    <input type="password" class="form-control form-control-lg rounded-0" name="pwd1"
-                                        id="pwd1" required="" autocomplete="new-password">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control form-control-lg rounded-0"
+                                        name="password" id="password" required="" autocomplete="password">
                                     <div class="invalid-feedback">Enter your password too!</div>
                                 </div>
                                 <button type="submit" class="btn btn-success btn-lg float-right"
