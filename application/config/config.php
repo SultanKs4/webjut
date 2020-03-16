@@ -138,7 +138,7 @@ $config['subclass_prefix'] = 'MY_';
 */
 
 // Jobsheet 6 Praktikum Bagian 2 langkah 2
-$config['composer_autoload'] = TRUE;
+$config['composer_autoload'] = "vendor/autoload.php";
 
 /*
 |--------------------------------------------------------------------------
