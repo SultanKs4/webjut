@@ -10,9 +10,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+    .badge {
+        margin-left: 3px;
+    }
+    </style>
 
-    <title><?= $title ?></title>
     <!-- <title>Hello, world!</title> -->
+    <title>Movie Search</title>
+    <!-- <title><?= $title ?></title> -->
 </head>
 
 <body>
@@ -51,15 +57,10 @@
                     <a class="nav-link" href="<?= base_url(); ?>home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url(); ?>mahasiswa">Data Mahasiswa</a>
+                    <a class="nav-link" href="<?= base_url(); ?>movie">Search Movie</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url(); ?>">About</a>
-                    <!-- Jobsheet 5 langklah 1 Bagian 21 -->
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url(); ?>login/logout">Logout</a>
-
-                    <!-- <a class="nav-item  nav-link disabled" href="#">Disabled</a> -->
                 </li>
             </ul>
         </div>

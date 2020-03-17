@@ -50,6 +50,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 // Jobsheet 5 Praktikum Bagian 1 Langkah 12 
-$route['default_controller'] = 'login';
+$route['default_controller'] = 'movie';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
