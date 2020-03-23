@@ -59,7 +59,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
 //  Jobsheet 2 Praktikum Bagian 1 Langkah 4
-$autoload['libraries'] = array('database', 'form_validation');
+$autoload['libraries'] = array('database');
 
 /*
 | -------------------------------------------------------------------
