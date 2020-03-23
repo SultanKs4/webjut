@@ -5,10 +5,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 // This can be removed if you use __autoload() in config.php OR use Modular Extensions
 /** @noinspection PhpIncludeInspection */
 require APPPATH . '/libraries/REST_Controller.php';
+require APPPATH . '/libraries/Format.php';
 
 // use namespace
 use Restserver\Libraries\REST_Controller;
-use Restserver\Libraries\Format;
 
 /**
  * This is an example of a few basic user interaction methods you could use
